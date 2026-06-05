@@ -1,31 +1,42 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>崇明线101 文档查阅</title><style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;background:#f5f6fa;color:#1a1a2e;min-height:100vh;max-width:520px;margin:0 auto;padding:0}
-.hdr{background:#fff;padding:18px 16px 14px;border-bottom:1px solid #e8e8ec;position:sticky;top:0;z-index:10}
-.hdr h1{font-size:17px;color:#1a1a2e}
-.hdr .sub{font-size:12px;color:#8e8ea0;margin-top:3px}
-.back{color:#8e8ea0;font-size:13px;text-decoration:none;display:inline-block;margin-bottom:6px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px}
-.card{background:#fff;border-radius:10px;padding:22px 12px;text-align:center;text-decoration:none;display:block;border:1px solid #eeeef2}
-.card .ic{font-size:30px;display:block;margin-bottom:8px}
-.card .nm{font-size:15px;color:#1a1a2e;font-weight:600}
-.card .ct{font-size:11px;color:#8e8ea0;margin-top:4px}
-.list{padding:10px 14px}
-.item{background:#fff;border-radius:10px;padding:14px;margin-bottom:10px;border:1px solid #eeeef2}
+body{font-family:-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;background:#f0f2f6;color:#1a1a2e;min-height:100vh;max-width:520px;margin:0 auto;padding:0 0 50px}
+.hdr{background:linear-gradient(135deg,#1a1a2e 60%,#2d2d5e);padding:22px 18px 18px;color:#fff}
+.hdr h1{font-size:19px;font-weight:700;letter-spacing:.5px}
+.hdr .sub{font-size:12px;color:#a8a8c8;margin-top:4px}
+.hdr .sub2{font-size:11px;color:#7878a0;margin-top:2px}
+.back{color:#a8a8c8;font-size:13px;text-decoration:none;display:inline-block;margin-bottom:8px;padding:3px 0}
+.back:active{color:#fff}
+.nav{display:flex;gap:6px;padding:10px 16px 4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{background:#fff;border-radius:20px;padding:6px 14px;font-size:12px;color:#555;text-decoration:none;white-space:nowrap;border:1px solid #e8e8f0;flex-shrink:0}
+.nav a:active{background:#d4a017;color:#fff;border-color:#d4a017}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 16px}
+.card{background:#fff;border-radius:14px;padding:22px 10px 16px;text-align:center;text-decoration:none;display:block;border:1px solid #eef0f4;box-shadow:0 1px 4px rgba(0,0,0,.04);transition:all .15s}
+.card:active{transform:scale(.96);border-color:#d4a017;box-shadow:0 2px 10px rgba(212,160,23,.15)}
+.card .ic{font-size:32px;display:block;margin-bottom:8px}
+.card .nm{font-size:14px;color:#1a1a2e;font-weight:600}
+.card .ct{font-size:11px;color:#9090a8;margin-top:4px}
+.list{padding:4px 16px}
+.item{background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:10px;border:1px solid #eef0f4;box-shadow:0 1px 3px rgba(0,0,0,.03)}
 .item-row{display:flex;align-items:center;gap:12px}
-.item-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:bold;flex-shrink:0}
+.item-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;letter-spacing:1px}
 .d{background:#e8f0fe;color:#1a73e8}
 .p{background:#fef3e8;color:#e67e22}
 .f{background:#fce8e8;color:#dc2626}
 .item-info{flex:1;min-width:0}
-.item-name{font-size:13px;color:#1a1a2e;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.item-meta{font-size:11px;color:#8e8ea0;margin-top:2px}
-.item-btn{background:#d4a017;color:#fff;border:none;border-radius:6px;padding:8px 14px;font-size:12px;cursor:pointer;text-decoration:none;white-space:nowrap;flex-shrink:0;font-weight:500;display:inline-block}
-.ft{text-align:center;padding:24px 16px;color:#c0c0cc;font-size:11px}
-.emp{text-align:center;padding:50px 16px;color:#8e8ea0;font-size:14px}
+.item-name{font-size:13px;color:#1a1a2e;font-weight:500;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.item-meta{font-size:11px;color:#9090a8;margin-top:2px}
+.item-btn{background:#d4a017;color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:12px;cursor:pointer;text-decoration:none;white-space:nowrap;flex-shrink:0;font-weight:600;display:inline-block;transition:background .15s}
+.item-btn:active{background:#b88914}
+.section-title{padding:14px 16px 4px;font-size:14px;font-weight:600;color:#1a1a2e}
+.ft{text-align:center;padding:30px 16px;color:#b0b0c4;font-size:11px;line-height:1.8}
+.emp{text-align:center;padding:60px 16px;color:#9090a8;font-size:14px}
 </style></head><body>
-<div class="hdr"><h1>📁 崇明线101</h1><div class="sub">选择专业 → 下载后用WPS打开</div></div>
-<div class="grid"><a href="勘察/" class="card"><span class="ic">🔍</span><span class="nm">勘察</span><span class="ct">4 份文件</span></a><a href="区间/" class="card"><span class="ic">🚇</span><span class="nm">区间</span><span class="ct">2 份文件</span></a><a href="土建/" class="card"><span class="ic">🏗</span><span class="nm">土建</span><span class="ct">2 份文件</span></a><a href="检测/" class="card"><span class="ic">📊</span><span class="nm">检测</span><span class="ct">2 份文件</span></a><a href="监理/" class="card"><span class="ic">📋</span><span class="nm">监理</span><span class="ct">2 份文件</span></a><a href="设计/" class="card"><span class="ic">✏</span><span class="nm">设计</span><span class="ct">2 份文件</span></a></div>
-<div class="ft">上海轨道交通市域线崇明线一期 101标</div></body></html>
+<div class="hdr"><h1>📁 崇明线101标</h1><div class="sub">单位工程验收 · 文档查阅系统</div><div class="sub2">扫码即可浏览 · 点击下载后用WPS打开</div></div>
+<div class="grid"><a href="all/" class="card"><span class="ic">📚</span><span class="nm">全部文件</span><span class="ct">18 份文件</span></a><a href="勘察/" class="card"><span class="ic">🔍</span><span class="nm">勘察</span><span class="ct">4 份文件</span></a><a href="设计/" class="card"><span class="ic">✏</span><span class="nm">设计</span><span class="ct">2 份文件</span></a><a href="土建/" class="card"><span class="ic">🏗</span><span class="nm">土建</span><span class="ct">2 份文件</span></a><a href="区间/" class="card"><span class="ic">🚇</span><span class="nm">区间</span><span class="ct">2 份文件</span></a><a href="建设单位/" class="card"><span class="ic">🏛</span><span class="nm">建设单位</span><span class="ct">1 份文件</span></a><a href="监理/" class="card"><span class="ic">📋</span><span class="nm">监理</span><span class="ct">2 份文件</span></a><a href="检测/" class="card"><span class="ic">📊</span><span class="nm">检测</span><span class="ct">2 份文件</span></a><a href="监测/" class="card"><span class="ic">📡</span><span class="nm">监测</span><span class="ct">2 份文件</span></a><a href="第三方轴线复测/" class="card"><span class="ic">📏</span><span class="nm">第三方轴线复测</span><span class="ct">1 份文件</span></a></div>
+<div class="ft">上海市轨道交通市域线崇明线一期 101标<br>更新: 2026-06-05 09:34</div>
+</body></html>
